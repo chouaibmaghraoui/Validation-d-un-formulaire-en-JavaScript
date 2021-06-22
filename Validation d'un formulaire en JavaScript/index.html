@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>formulaire</title>
+</head>
+<body>
+   <form id="form" name="f" method="post" action="confimer.html"></form>
+   <div align="center">
+       <h1><strong>INSSCRIPTION </strong></h1>
+       <p>&nabsp</p>
+       <table cellpadding="10" cellspacing="10" aligh="center"
+       width="502" border="0">
+       <tr align="center" valigne="middle">
+           <td width="166">nom &amp; pr&eacute;nom</td>
+           <td width="320"><label>
+               <input name="np" type="text" id="np">
+           </label></td>
+       </tr>
+       <tr align="center" valigne="middle">
+        <td width="166">CIN</td>
+        <td width="320"><label>
+            <input name="np" type="text" id="np">
+        </label></td>
+    </tr>
+       <tr align="center" valign="maiddle">
+           <td>mail</td>
+           <td><label>
+               <input type="email" name="email" maxlength = '30' 
+               placeholder ="un @ suivi d'un point" required
+               pattern ="[A-z0-9._-]+[@]{1}[A-z0-9._-]+[.]{1}[A-z]{2,10}">
+           </label></td>
+       </tr>
+       <tr align="center" valign="middle">
+        <td>viveau scolaire</td>
+        <td><label>
+            <input name="cil" type="checkbox" id="cill" value="checkbox"/>
+            secondaire</label> <labek>
+            <input name="ci2" type="checkbox" id="ci2" value="checkobx"/>
+            Universitaire </labek><labek>
+            <input name="ci3" type="checkbox" id="ci3" value="checkobx"/>
+             Autre </labek>
+            </labek></td>
+    </tr>
+       <tr align="center" valign= "middle">
+           <td>modules de formation</td>
+           <td><label>
+               <select name="n" id="n">
+                <option value="html">html</option>
+                <option value="html">css</option>
+                <option value="html">javascript</option>
+                <option value="html">jquery</option>
+               </select>
+           </label></td>
+       </tr>
+       <tr align="center" valign="middle">
+           <td>VIP</td>
+           <td><label>
+               <input type="radio" name="v" value="radiobutton" />
+               oui </label><label>
+                <input type="radio" name="v" value="radiobutton"/>
+                non</label>
+            </td>
+       </tr>
+       <tr align="center" valign="middle">
+           <th colspan="2"><input onclick="return verif() ;" type="submit" value="confirmer"/></th>
+       </tr>
+       </table>
+    </div>
+    <body></body>
+    <scrip>
+        function verif(){
+            if(f.np.value =="")
+            {
+                alert("champ nom et prénom est obligatoire");
+                return false;
+                elsei if (f.m.value){
+                    alert("champ mailest  obligatoire");
+                    return false
+                    else if ( (f.m.value.indexof('0')==-1)//
+                    (f.m.verif.indexof('.')<0) )
+                    alert("vérifier que votre mail est correct");
+                    return false
+
+                }
+            }
+        }
+    </scrip>
+    <script src="index.js"></script>
+</body>
+</html>
